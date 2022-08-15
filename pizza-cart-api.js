@@ -13,12 +13,11 @@ document.addEventListener('alpine:init', () => {
         })
 
         .then(()=>{
-          return axios
-          .get ('https://pizza-cart-api.herokuapp.com/api/pizza-cart/create?username=' + this.username)
+          return this.createCart();
         })
 
         .then((result)=> {
-          console.log(results.data);
+          //console.log(results.data);
 
           this.cartId = result.data.cart_code;
         });
