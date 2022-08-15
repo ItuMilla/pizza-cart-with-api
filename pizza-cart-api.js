@@ -69,8 +69,8 @@ document.addEventListener('alpine:init', () => {
         //to be able to add pizza to the cart, I need a cart Id..
           //alert(pizza.flavour + " : " + pizza.size)
           const params = {
-            cart_code : this.cartId,
-            pizza_id : pizza.id
+            cart_code: this.cartId,
+            pizza_id: pizza.id
           }
 
           axios
