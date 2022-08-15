@@ -2,31 +2,37 @@ document.addEventListener('alpine:init', () => {
   Alpine.data('pizzaCartWithAPIWidget', function() {
     return {
 
-      init(){
+      init() {
           //alert('pizza loading..')
           //call pizza API
           axios
               .get('https://pizza-cart-api.herokuapp.com/api/pizzas')
-              .then((result)=>{
+              .then((result) =>{
                   //console.log(result.data);
-              this.pizzas= result.data.pizzas
+              this.pizzas = result.data.pizzas
         })
+
         .then(()=>{
-          return this.createCart();
+          return axios
+          .get ('https://pizza-cart-api.herokuapp.com/api/pizza-cart/create?username=' + this.username)
         })
-        .then((result)=>{
+
+        .then((result)=> {
+          console.log(results.data);
+
           this.cartId = result.data.cart_code;
         });
+        
       },
       featuredPizzas(){
         //Get a list of featured pizzas
         return axios
-            .get('https://pizza-cart-api.herokuapp.com/api/pizzas/featured')
+            .get('https://https://pizza-cart-api.herokuapp.com/api/pizzas/featured')
       },
       postfeaturedPizzas(){
         //Get a list of featured pizzas
         return axios
-            .post('https://pizza-cart-api.herokuapp.com/api/pizzas/featured')
+            .post('https://https://pizza-cart-api.herokuapp.com/api/pizzas/featured')
       },
 
       createCart(){
@@ -43,14 +49,15 @@ document.addEventListener('alpine:init', () => {
           .then((result) =>{
             this.cart = result.data;
           });
+
       },
 
       pizzaImage(pizza){
         return `/images/${pizza.size}.png`
       },
 
-      message: 'let eat pizza',
-      username:'',
+      message: 'Eating pizzas',
+      username:'ItuMilla',
       pizzas: [],
       featuredpizzas: [],
       cartId:'',

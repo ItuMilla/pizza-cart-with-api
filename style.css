@@ -7,14 +7,14 @@
 }
 
 body{
-    background-color: ;
+    background-color: pink;
 }
 .body{
     padding: 1em;
     margin: 1em;
 }
 .intro{
-    background-color:darkcyan;
+    background-color:;
     border-radius: 0.5em;
     font-size: large;
     font-weight: bold;
@@ -72,4 +72,15 @@ th, td{
 .aa{
     margin-left: 50%;
     display: flex;
+}
+
+.btn {
+    padding: 1em 0em 1em 0em;
+    width: 5em;
+    background-color: yellowgreen;
+    color: grey;
+    font-weight: bold;
+    border: 0;
+    cursor: pointer;
+    border-radius: 0.25em;
 }
