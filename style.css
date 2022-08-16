@@ -13,12 +13,7 @@ body{
     padding: 1em;
     margin: 1em;
 }
-.intro{
-    background-color:;
-    border-radius: 0.5em;
-    font-size: large;
-    font-weight: bold;
-}
+
 .cart{
     padding: 1em;
     width: 98%;
@@ -56,22 +51,6 @@ th, td{
     text-align: center;
     border: 1px solid black;
     padding: 15px;
-}
-.a1{
-    flex: 1;
-    margin: auto;
-    display: flex;
-}
-.display{
-    display: flex;
-}
-.a2{
-    margin: 1em;
-    padding: 1em;
-}
-.aa{
-    margin-left: 50%;
-    display: flex;
 }
 
 .btn {
