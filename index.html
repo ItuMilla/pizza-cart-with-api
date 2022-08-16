@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="pizza-cart-api.js" defer></script>
-    <script src="alpine-3.10.2.js" defer></script>
+    <!--<script src="alpine-3.10.2.js" defer></script>-->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     
 
  
@@ -62,17 +63,26 @@
                         <button>Buy</button>
                     </td>
                 </tr> 
-
+          </template>
             </table>
+
         </div>
 
     </div>
+
+<ul>
+   <!-- <template x-for="pizza in pizzas" > -->
+<li>
+Milla
+</li>
+    <!-- </template> -->
+</ul>
 
         <table>
             <template x-for="pizza in pizzas" >
                 <tr>
 
-                </tr>>
+                </tr>
                 <img x-bind:src="pizzaImage(pizza)" height="30" alt="">
                 <tr>
                 <td x-text=pizza.flavour></td>
@@ -83,9 +93,8 @@
                 </td>
             </tr>
         </template>
-    </table>
+    </table> 
 
-    </div>  
 </div>
 
 </body>

@@ -8,8 +8,9 @@ document.addEventListener('alpine:init', () => {
           axios
               .get('https://pizza-cart-api.herokuapp.com/api/pizzas')
               .then((result) =>{
-                  //console.log(result.data);
+                  console.log(result.data);
               this.pizzas = result.data.pizzas
+              console.log(this.pizzas)
         })
 
         .then(()=>{
