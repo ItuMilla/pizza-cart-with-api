@@ -55,7 +55,7 @@
                 <template x-for="pizza in cart.pizzas">
                     <tr>
                         <td x-text="pizza.flavour"></td>
-                        <td x-text="pizzas.size"></td>
+                        <td x-text="pizza.size"></td>
                         <td><button x-on:click="add(pizza)">+</button>
                             <button x-on:click="remove(pizza)">-</button></td>
                         <td x-text="pizza.qty"></td>
@@ -96,7 +96,7 @@
 
         <br>
 
-        <div calss="Pizzas1">
+        <div class="Pizzas1">
             <template x-for="pizza in cart.pizzas">
                 <!-- <table>
                     <thead>
@@ -120,9 +120,10 @@
                         <h3 x-text="pizza.flavour"></h3>
                     </div>
                     <img x-bind:src="pizzaImage(pizza)" alt="" width="30">
-                    <div x-text="pizza.size">
-                    </div>
                     <div>
+                    <h3 x-text="pizza.size"></h3>
+                    </div>
+                     <div>
                         <h3 x-text="pizza.price"></h3>
                     </div>
                     <button x-on:click="add(pizza)">Buy</button>
