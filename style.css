@@ -1,4 +1,11 @@
-
+.intro{
+    background-color: blueviolet;
+    border-radius: 0.5em;
+    font-size: large;
+    font-weight: bold;
+    margin-top:  auto;
+    justify-content: flex-end;
+}
 .body{
     background-color: pink;
     padding: 1em;
@@ -43,7 +50,7 @@ input{
 }
 .message{
     color: black;
-    background-color: whitesmoke;
+    background-color: white;
 }
 table{
     border-collapse: collapse;
