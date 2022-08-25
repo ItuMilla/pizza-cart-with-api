@@ -15,7 +15,7 @@
 
 <body>
     <div class="body" x-data="pizzaCartWithAPIWidget">
-    <div class="intro">
+    
         <div x-text="message"></div>
         <div x-text="cartId"></div>
 
@@ -31,8 +31,7 @@
         <div>
             Cart total: R<strong x-text="cart.total.toFixed(2)"></strong>
         </div>
-    </div>
-
+    
     <div>
 
         <div x-show="open" class="cart">
@@ -48,7 +47,7 @@
                 <tr>
                     <th>Flavour</th>
                     <th>Size</th>
-                    <th>Add or Cancel Order</th>
+                    <th>Add or Remove Order</th>
                     <th>Qty</th>
                     <th>Total</th>
                 </tr>
