@@ -15,7 +15,7 @@
 
 <body>
     <div class="body" x-data="pizzaCartWithAPIWidget">
-
+    <div class="intro">
         <div x-text="message"></div>
         <div x-text="cartId"></div>
 
@@ -31,6 +31,7 @@
         <div>
             Cart total: R<strong x-text="cart.total.toFixed(2)"></strong>
         </div>
+    </div>
 
     <div>
 
@@ -117,10 +118,9 @@
                         <h3 x-text="pizza.flavour"></h3>
                     </div>
                     <img x-bind:src="pizzaImage(pizza)" alt="" width="30">
-                    <div>
-                    <h3 x-text="pizza.size"></h3>
+                    <div x-text="pizza.size">
                     </div>
-                     <div>
+                    <div>
                         <h3 x-text="pizza.price"></h3>
                     </div>
                     <button x-on:click="add(pizza)">Buy</button>
@@ -151,5 +151,3 @@
         </div>
     </div>
 </body>
-
-</html>

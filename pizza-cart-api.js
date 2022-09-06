@@ -77,7 +77,7 @@ document.addEventListener('alpine:init', () => {
         axios
           .post('https://pizza-cart-api.herokuapp.com/api/pizza-cart/add', params)
           .then(() => {
-            this.message = "pizza added to the cart"
+            this.message = "Pizza added to the cart!"
             this.showCart();
           })
           .then(() => {
@@ -104,7 +104,7 @@ document.addEventListener('alpine:init', () => {
         axios
           .post('https://pizza-cart-api.herokuapp.com/api/pizza-cart/remove', params)
           .then(() => {
-            this.message = "pizza removed to the cart"
+            this.message = "Pizza removed to the cart"
             this.showCart();
           })
           .catch(err => alert(err));
@@ -123,7 +123,7 @@ document.addEventListener('alpine:init', () => {
             }
             else if (this.paymentAmount >= this.cart.total.toFixed(2)) {
               this.paymentMessage = 'Payment sucessful!'
-              this.message = this.username + "paid!"
+              this.message = this.username + "Paid!"
               setTimeout(() => {
                 this.cart.total = 0
                 window.location.reload()
